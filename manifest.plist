@@ -1,0 +1,17 @@
+{
+	"identifier" = "oolite.oxp.pleiadian.deeperspace";
+	"required_oolite_version" = "1.84";
+	"title" = "DeeperSpace HUD";
+	"version" = "1.01";
+	"category" = "HUDs";
+	"description" = "The evolution of the DeepSpace HUD, rendered in Cycles.";
+	"author" = "Pleiadian";
+	"information_url" = "http://wiki.alioth.net/index.php/DeeperSpace_HUD";
+	"license" = "CC-BY-NC-SA 4.0";
+	"tags" =
+	(
+		"HUD",
+		"DeeperSpace",
+		"DeepSpace"
+	);
+}

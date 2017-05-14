@@ -1,0 +1,1061 @@
+
+//                      pleiadian presents:
+//     ____                            _____
+//    / __ \___  ___  ____  ___  _____/ ___/____  ____ _________
+//   / / / / _ \/ _ \/ __ \/ _ \/ ___/\__ \/ __ \/ __ `/ ___/ _ \
+//  / /_/ /  __/  __/ /_/ /  __/ /   ___/ / /_/ / /_/ / /__/  __/
+// /_____/\___/\___/ .___/\___/_/   /____/ .___/\__,_/\___/\___/
+//                /_/                   /_/
+//
+//              The evolution of the DeepSpace HUD
+//
+//             * http://www.oolite.de/deeperspace *
+
+{
+
+// We need to set the color controls first.
+overall_alpha = 1.0;
+// Reticle turns red when on target
+reticle_target_sensitive = yes;
+// Transparent crosshair as we provide our own
+crosshair_color= "clearColor";
+
+// The legends are drawn first.
+
+dials = (
+
+	// HYPERSPACE JUMP DESTINATION IN GREEN ALERT
+	{
+		selector = "drawWitchspaceDestination:";
+		x = -139.988;
+		y = 211.829;
+		x_origin = 0;
+		y_origin = 0;
+		height = 18;
+		width = 18;
+		align = 0;
+		alert_conditions = 2;
+		color = (0.85, 0.85, 0.85, 0.85);
+	},
+	
+	
+	// GENERIC LOCATION INFO
+	{
+		data_source = "DPR_InfoLine1";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -20;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width=6;
+		height=6;
+	},
+	
+	{
+		data_source = "DPR_InfoLine2";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -30;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width=9;
+		height=9;
+	},
+	
+	{
+		data_source = "DPR_InfoLabel1";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -45;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	
+	{
+		data_source = "DPR_InfoLine3";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 55;
+		y = -45;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	
+	{
+		data_source = "DPR_InfoLabel2";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -53;
+		color = (0.952, 0.650, 0.039);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	
+	{
+		data_source = "DPR_InfoLine4";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 55;
+		y = -53;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	
+	{
+		data_source = "DPR_InfoLabel3";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -61;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	
+	{
+		data_source = "DPR_InfoLine5";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 55;
+		y = -61;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	
+	{
+		data_source = "DPR_InfoLabel4";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -69;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	{
+		data_source = "DPR_InfoLine6";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 55;
+		y = -69;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	
+	{
+		data_source = "DPR_InfoLabel5";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -77;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	{
+		data_source = "DPR_InfoLine7";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 55;
+		y = -77;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	
+	{
+		data_source = "DPR_InfoLabel6";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -85;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	{
+		data_source = "DPR_InfoLine8";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 55;
+		y = -85;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	
+	{
+		data_source = "DPR_InfoLabel7";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -105;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	{
+		data_source = "DPR_InfoLine9";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -113;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	
+	{
+		data_source = "DPR_InfoLabel8";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -113;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	{
+		data_source = "DPR_InfoLine10";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -129;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	
+	{
+		data_source = "DPR_InfoLabel9";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -121;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+	{
+		data_source = "DPR_InfoLine11";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = -1;
+		y_origin = 1;
+		x = 20;
+		y = -145;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+		width = 6;
+		height= 6;
+	},
+
+
+	// TARGETING ENHANCEMENT
+	{
+		equipment_required = "EQ_SCANNER_SHOW_MISSILE_TARGET";
+		selector = "drawTargetReticle:";
+		alert_conditions = 14;
+	},
+
+
+	// CLOCK
+	{
+		selector = "drawClock:";
+		x = -265.8;
+		y = -224.614;
+		x_origin = 0;
+		y_origin = 0;
+		height = 9;
+		width = 9;
+		align = 0;
+		alert_conditions = 14;
+		rgb_color = (0.9, 0.9, 0.9);
+		alpha = 0.55;
+	},
+
+
+	// TARGET LOCK OF ASC
+	{
+		equipment_required 	= "EQ_ADVANCED_COMPASS";
+		selector = "drawASCTarget:";
+		x = -265.8;
+		y = -191.614;
+		x_origin = 0;
+		y_origin = 0;
+		height = 9;
+		width = 9;
+		align = 0;
+		alert_conditions = 14;
+		rgb_color = (0.9, 0.9, 0.9);
+		alpha = 0.55;
+	},
+
+
+	// WAYPOINT DISPLAY
+	{
+		selector = "drawWaypoints:";
+		x = -265.8;
+		y = -179.614;
+		x_origin = 0;
+		y_origin = 0;
+		height = 9;
+		width = 9;
+		align = 0;
+		alert_conditions = 14;
+		rgb_color = (0.9, 0.9, 0.9);
+		alpha = 0.55;
+	},
+
+
+	// MISSILE / TARGET DISPLAY
+	{
+		selector = "drawMissileDisplay:";
+		x = -380.98;
+		y = -140.385;
+		x_origin = 0;
+		y_origin = 0;
+		height = 8;
+		width = 8;
+		align = 0;
+		alert_conditions = 14;
+		rgb_color = (0.9, 0.9, 0.9);
+		//alpha = 0.85;
+	},
+
+
+	// FUEL SCOOP STATUS
+	{
+		selector = "drawScoopStatus:";
+		x = -380.98;
+		y = -86.385;
+		x_origin = 0;
+		y_origin = 0;
+		height = 16;
+		width = 16;
+		align = 0;
+		alert_conditions = 14;
+		rgb_color = (0.9, 0.9, 0.9);
+		alpha = 0.55;
+	},
+
+
+	// SCANNER ZOOM INDICATOR
+	{
+		selector = "drawScannerZoomIndicator:";
+		x = -259.8;
+		y = -195.614;
+		x_origin = 0;
+		y_origin = 0;
+		height = 9;
+		width = 9;
+		align = 0;
+		alert_conditions = 14;
+		rgb_color = (0.9, 0.9, 0.9);
+		alpha = 0.85;
+	},
+
+
+	// STATION AEGIS
+	{
+		selector = "drawAegis:";
+		alert_conditions = 14;
+		x_origin = 0;
+		y_origin = 0;
+		alpha = 0.85;
+		x = -265.8;
+		y = -57.147;
+	},
+
+
+	// SPEED BAR
+	{
+		selector = "drawSpeedBar:";
+		alert_conditions = 14;
+		x_origin = 0;
+		y_origin = 0;
+		alpha = 0.55;
+		x = 229.917;
+		y = -121.825;
+		rgb_color = (0.33, 0.66, 0.99);
+		color_low = (0.33, 0.66, 0.99);
+		color_medium = (0.33, 0.66, 0.99);
+		color_high = (0.9, 0.0, 0.0);
+		draw_surround = no;
+		width = 100.561;
+		height = 10.632;
+	},
+
+
+	// ALTITUDE METER
+	{
+		selector = "drawAltitudeBar:";
+		alert_conditions = 14;
+		x_origin = 0;
+		y_origin = 0;
+		x = 266.0;
+		y = -57.147;
+		color_low = (1.0, 0.607, 0.0);
+		color_medium = (0.309, 0.843, 0.392);
+		color_high = (0.309, 0.843, 0.392);
+		color_critical = (0.9, 0.0, 0.0);
+		color_surround = (0.309, 0.843, 0.392);
+		draw_surround = no;
+		width = 13.29;
+		height = 44.3;
+		alpha = 0.55;
+	},
+
+
+	// FUEL BAR / METER
+	{
+		selector = "drawFuelBar:";
+		alert_conditions = 14;
+		x_origin = 0;
+		y_origin = 0;
+		x = 229.917;
+		y = -147.519;
+		color_low = (0.9, 0.0, 0.0);
+		color_medium = (0.33, 0.66, 0.99);
+		color_high = (0.33, 0.66, 0.99);
+		draw_surround = no;
+		width = 100.561;
+		height = 10.632;
+		alpha = 0.55;
+	},
+
+
+	// SPEED IN M PER SECOND
+	{
+		data_source = "DPR_CurrentSpeed";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = 1;
+		y_origin = 0;
+		x = -242;
+		y = -127;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+	},
+	
+	// TORUS VELOCITY
+	{
+		data_source = "DPR_TorusVelocity";
+		selector = "drawCustomText:";
+		alert_conditions = 14;
+		x_origin = 1;
+		y_origin = 0;
+		x = -242;
+		y = -135;
+		width=7;
+		height=7;
+		color = (0.85, 0.85, 0.85);
+		alpha = 0.85;
+	},
+
+
+	// WEAPON/LASER TEMPERATURE
+	{
+		selector = "drawWeaponTempBar:";
+		alert_conditions = 14;
+		x_origin = 0;
+		y_origin = 0;
+		x = 182.516;
+		y = -193.148;
+		color_low = (0.33, 0.66, 0.99);
+		color_medium = (0.33, 0.66, 0.99);
+		color_high = (0.9, 0.0, 0.0);
+		draw_surround = no;
+		width = 9.746;
+		height = 46.958;
+		alpha = 0.55;
+	},
+
+
+	// CABIN PRESSURE
+	{
+		selector = "drawCabinTempBar:";
+		alert_conditions = 14;
+		x_origin = 0;
+		y_origin = 0;
+		x = 199.793;
+		y = -193.148;
+		color_low = (0.33, 0.66, 0.99);
+		color_medium = (0.33, 0.66, 0.99);
+		color_high = (0.9, 0.0, 0.0);
+		draw_surround = no;
+		width = 9.746;
+		height = 46.958;
+		alpha = 0.55;
+	},
+
+
+	// ENERGY BAR(S)
+	{
+		selector = "drawEnergyGauge:";
+		alert_conditions = 14;
+		x_origin = 0;
+		y_origin = 0;
+		x = 217.07;
+		y = -193.148;
+		color_low = (0.33, 0.66, 0.99);
+		color_medium = (0.309, 0.843, 0.392);
+		draw_surround = no;
+		width = 9.746;
+		height = 46.958;
+		labelled = no;
+		alpha = 0.55;
+	},
+
+
+	// YAW
+	{
+		selector = "drawYawBar:";
+		alert_conditions = 14;
+		x_origin = 0;
+		y_origin = 0;
+		x = 260.927;
+		y = -196.249;
+		color = (0.33, 0.66, 0.99);
+		draw_surround = no;
+		width = 44.3;
+		height = 4.43;
+	},
+
+
+	// PITCH
+	{
+		selector = "drawPitchBar:";
+		alert_conditions = 14;
+		x_origin = 0;
+		y_origin = 0;
+		x = 260.927;
+		y = -196.249;
+		color = (0.33, 0.66, 0.99);
+		draw_surround = no;
+		width = 4.43;
+		height = 44.3;
+	},
+
+
+	// AFT SHIELD BAR
+	{
+		selector = "drawAftShieldBar:";
+		alert_conditions = 8;
+		x_origin = 0;
+		y_origin = 0;
+		x = -69.108;
+		y = 223.829;
+		width = 127.141;
+		height = 11.961;
+		color_low = (0.9, 0.0, 0.0);
+		color_medium = (0.862, 0.690, 0.0);
+		color_high = (0.086, 0.662, 0.098);
+		draw_surround = no;
+		alpha = 0.55;
+	},
+
+	// FORE SHIELD BAR
+	{
+		selector = "drawForwardShieldBar:";
+		alert_conditions = 8;
+		x_origin = 0;
+		y_origin = 0;
+		x = 68.665;
+		y = 223.829;
+		width = 127.141;
+		height = 11.961;
+		color_low = (0.9, 0.0, 0.0);
+		color_medium = (0.862, 0.690, 0.0);
+		color_high = (0.086, 0.662, 0.098);
+		draw_surround = no;
+		alpha = 0.55;
+	},
+
+
+	// COMPASS
+
+	// WITHOUT ASC
+	{
+		selector = "drawCompass:";
+		alert_conditions = 14;
+		x_origin = 0;
+		y_origin = 0;
+		alpha = 1.0;
+		x = 353.957;
+		y = -112.965;
+		width = 69.551;
+		height = 69.551;
+		rgb_color = (0.815, 0.913, 0.937);
+	},
+
+
+	// SCANNER
+
+	// GREEN ALERT
+	{
+		selector = "drawScanner:";
+		alert_conditions = 2;
+		x_origin = 0;
+		y_origin = 0;
+		x = 0;
+		y = -153.278;
+		width = 264.471;
+		height = 107.206;
+		rgb_color = (0.180, 0.545, 0.274);
+		alpha = 1.0;
+	},
+
+	// YELLOW ALERT
+	{
+		selector = "drawScanner:";
+		alert_conditions = 4;
+		x_origin = 0;
+		y_origin = 0;
+		x = 0;
+		y = -153.278;
+		width = 264.471;
+		height = 107.206;
+		rgb_color = (0.705, 0.545, 0.160);
+		alpha = 1.0;
+	},
+
+	// RED ALERT
+	{
+		selector = "drawScanner:";
+		alert_conditions = 8;
+		x_origin = 0;
+		y_origin = 0;
+		x = 0;
+		y = -153.278;
+		width = 264.471;
+		height = 107.206;
+		rgb_color = (0.709, 0.172, 0.172);
+		alpha = 1.0;
+	}
+
+);
+
+
+// THE COMM LOG GUI
+"comm_log_gui" =
+{
+	x_origin = 0;
+	y_origin = 0;
+	x = -229.917;
+	y = -134.672;
+	width = 114.294;
+	height = 53.603;
+	alpha = 0.55;
+	permanent = no;
+	automatic = yes;
+	background_rgba = "0.0 0.0 0.0 0.0";
+	rgb_color = (0.33, 0.66, 0.99);
+	row_height = 7;
+	viewscreen_only = true;
+};
+
+
+// THE MESSAGE GUI
+"message_gui" = {
+	alpha = "0.75";
+	width = 434.14;
+	height = 72.209;
+	x_origin = 0;
+	y_origin = 0;
+	x = 0;
+	y = -36.326;
+	"row_height" = 16;
+	color = (0.33, 0.66, 0.99, 0.85);
+	alert_conditions = 14;
+};
+
+
+legends = (
+
+	// MAIN COCKPIT SCREEN HAS ONLY THREE CONDITIONS, AS THERE ARE ONLY THREE
+	// ALERT CONDITIONS.
+
+	// GREEN
+	{
+		image = "DPR_Main_Green.png";
+		alert_conditions = 2;
+		y_origin = 0;
+		x_origin = 0;
+		width = 850.56;
+		height= 478.44;
+		alpha = 1.0;
+	},
+
+	{
+		image = "DPR_Scanner_Green.png";
+		alert_conditions = 2;
+		y_origin = 0;
+		x_origin = 0;
+		width = 850.56;
+		height= 478.44;
+		alpha = 1.0;
+	},
+
+	{
+		image = "DPR_Status_Destination.png";
+		alert_conditions = 2;
+		y_origin = 0;
+		x_origin = 0;
+		width = 850.56;
+		height= 478.44;
+		alpha = 1.0;
+	},
+
+
+	// YELLOW
+	{
+		image = "DPR_Main_Yellow.png";
+		alert_conditions = 4;
+		y_origin = 0;
+		x_origin = 0;
+		width = 850.56;
+		height= 478.44;
+		alpha = 1.0;
+	},
+
+	{
+		image = "DPR_Scanner_Yellow.png";
+		alert_conditions = 4;
+		y_origin = 0;
+		x_origin = 0;
+		width = 850.56;
+		height= 478.44;
+		alpha = 1.0;
+	},
+
+	{
+		image = "DPR_Status_Masslock.png";
+		alert_conditions = 4;
+		y_origin = 0;
+		x_origin = 0;
+		width = 850.56;
+		height= 478.44;
+		alpha = 1.0;
+	},
+
+
+	// MASSLOCK TEXT INFO
+	{
+		text = "WARNING: Mass-Locked";
+		x = -139.988;
+		y = 211.829;
+		x_origin = 0;
+		y_origin = 0;
+		height = 18;
+		width = 18;
+		align = 0;
+		alert_conditions = 4;
+		color = (0.85, 0.85, 0.85, 0.85);
+	},
+
+
+	// RED
+	{
+		image = "DPR_Main_Red.png";
+		alert_conditions = 8;
+		y_origin = 0;
+		x_origin = 0;
+		width = 850.56;
+		height= 478.44;
+		alpha = 1.0;
+	},
+
+	{
+		image = "DPR_Scanner_Red.png";
+		alert_conditions = 8;
+		y_origin = 0;
+		x_origin = 0;
+		width = 850.56;
+		height= 478.44;
+		alpha = 1.0;
+	},
+
+	{
+		image = "DPR_Status_Shields.png";
+		alert_conditions = 8;
+		y_origin = 0;
+		x_origin = 0;
+		width = 850.56;
+		height= 478.44;
+		alpha = 1.0;
+	},
+
+	// Overlays
+	{
+		image = "DPR_DisplayOverlays.png";
+		alert_conditions = 14;
+		y_origin = 0;
+		x_origin = 0;
+		width = 850.56;
+		height= 478.44;
+		alpha = 1.0;
+	},
+
+
+	// EQUIPMENT ICONS
+	{
+		image		= "eq_escapepod.png";
+		//equipment_required = "EQ_ESCAPE_POD";
+		alert_conditions = 14;
+		height = 20.0;
+		width = 20.0;
+		x = -353.98;
+		y = -86.385;
+		x_origin = 0;
+		y_origin = 0;
+		alpha = 0.2;
+	},
+
+	{
+		image		= "eq_escapepod.png";
+		equipment_required = "EQ_ESCAPE_POD";
+		alert_conditions = 14;
+		height = 20.0;
+		width = 20.0;
+		x = -353.98;
+		y = -86.385;
+		x_origin = 0;
+		y_origin = 0;
+		alpha = 0.8;
+	},
+
+	{
+		image		= "eq_dockingcomputer.png";
+		//equipment_required = "EQ_DOCK_COMP";
+		alert_conditions = 14;
+		height = 20.0;
+		width = 20.0;
+		x = -326.98;
+		y = -86.385;
+		x_origin = 0;
+		y_origin = 0;
+		alpha = 0.2;
+	},
+
+	{
+		image		= "eq_dockingcomputer.png";
+		equipment_required = "EQ_DOCK_COMP";
+		alert_conditions = 14;
+		height = 20.0;
+		width = 20.0;
+		x = -326.98;
+		y = -86.385;
+		x_origin = 0;
+		y_origin = 0;
+		alpha = 0.8;
+	},
+
+
+	{
+		image		= "eq_ecm.png";
+		//equipment_required = "EQ_DOCK_COMP";
+		alert_conditions = 14;
+		height = 20.0;
+		width = 20.0;
+		x = -380.98;
+		y = -115.385;
+		x_origin = 0;
+		y_origin = 0;
+		alpha = 0.2;
+	},
+
+	{
+		image		= "eq_ecm.png";
+		equipment_required = "EQ_ECM";
+		alert_conditions = 14;
+		height = 20.0;
+		width = 20.0;
+		x = -380.98;
+		y = -115.385;
+		x_origin = 0;
+		y_origin = 0;
+		alpha = 0.8;
+	},
+
+
+	{
+		image		= "eq_fuelinjection.png";
+		//equipment_required = "EQ_DOCK_COMP";
+		alert_conditions = 14;
+		height = 20.0;
+		width = 20.0;
+		x = -353.98;
+		y = -115.385;
+		x_origin = 0;
+		y_origin = 0;
+		alpha = 0.2;
+	},
+
+	{
+		image		= "eq_fuelinjection.png";
+		equipment_required = "EQ_FUEL_INJECTION";
+		alert_conditions = 14;
+		height = 20.0;
+		width = 20.0;
+		x = -353.98;
+		y = -115.385;
+		x_origin = 0;
+		y_origin = 0;
+		alpha = 0.2;
+	},
+
+
+	{
+		image		= "eq_galdrive.png";
+		//equipment_required = "EQ_DOCK_COMP";
+		alert_conditions = 14;
+		height = 20.0;
+		width = 20.0;
+		x = -326.98;
+		y = -115.385;
+		x_origin = 0;
+		y_origin = 0;
+		alpha = 0.2;
+	},
+
+	{
+		image		= "eq_galdrive.png";
+		equipment_required = "EQ_GAL_DRIVE";
+		alert_conditions = 14;
+		height = 20.0;
+		width = 20.0;
+		x = -326.98;
+		y = -115.385;
+		x_origin = 0;
+		y_origin = 0;
+		alpha = 0.8;
+	},
+
+
+	// CROSSHAIRS
+	{
+		image = "DPR_Cross_Green.png";
+		alert_conditions = 2;
+		height = 66.45;
+		width = 66.45;
+		x_origin = 0;
+		y_origin = 0;
+		x = 0;
+		y = 0;
+		alpha = 1.0;
+	},
+
+	{
+		image = "DPR_Cross_Yellow.png";
+		alert_conditions = 4;
+		height = 66.45;
+		width = 66.45;
+		x_origin = 0;
+		y_origin = 0;
+		x = 0;
+		y = 0;
+		alpha = 1.0;
+	},
+
+	{
+		image = "DPR_Cross_Red.png";
+		alert_conditions = 8;
+		height = 66.45;
+		width = 66.45;
+		x_origin = 0;
+		y_origin = 0;
+		x = 0;
+		y = 0;
+		alpha = 1.0;
+	},
+);
+
+
+// MFDs!
+multi_function_displays = (
+{
+	width = 209.982;
+	height = 109.421;
+	x = 310.1;
+	y = 168.34;
+	x_origin = 0;
+	y_origin = 0;
+	background_rgba = "0.0 0.301 0.56 0.65";
+},
+{
+	width = 209.982;
+	height = 109.421;
+	x = 310.1;
+	y = 46.072;
+	x_origin = 0;
+	y_origin = 0;
+	background_rgba = "0.0 0.301 0.56 0.65";
+}
+);
+
+}
